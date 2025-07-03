@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --maincolor: #001d42;
+    --secondcolor: #0386f8;
+    --thirdcolor: #7ef9f9;
+    --textcolor: #4A5764;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: "Poppins", sans-serif;
+    color: var(--maincolor);
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+    background-color: white !important;
+
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar a {
+    color: var(--textcolor);
+    font-size: 1.7rem;
+    margin: 1rem;
+    position: relative;
+    margin-right: 15rem;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+    font-weight: 600;
+}
+
+.navbar a::after {
+    content: "";
+    background-color: var(--maincolor);
+    width: 0;
+    position: absolute;
+    height: 0.2rem;
+    left: 0;
+    margin-top: 0.5rem;
+    top: 100%;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-bars {
+    color: var(--textcolor);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: none;
+}
+
+#menu-bars:hover {
+    color: var(--maincolor);
+}
+
+.navbar.open {
+    height: 200px;
+    width: 100%;
+}
+
+.contact {
+    margin-top: 100px;
+}
+
+.heading{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--maincolor);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto; 
+    background-color: var(--thirdcolor);
+    border-radius: 15px;
+    padding-bottom: 4rem;
+
+}
+
+.form-group-container {
+    display: flex;
+    margin: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin: 0 1rem;
+}
+
+.form-group label {
+    margin-top: 10px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.form-group .box {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    width: 85%;
+    height: 40px;
+    padding: 12px 3px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    color: black;
+    margin: 8px 0px;
+}
+
+.link-btn {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid var(--grad-clr1);
+    background: var(--maincolor);
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    margin-top: 3rem;
+    text-transform: uppercase;
+}
+.link-btn:hover {
+    background-color: white;
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+}
+
+
+
+.checkbox-group {
+    display: flex;
+    margin: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-left: 15rem;
+    margin-bottom: 2rem;
+}
+
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 1rem;
+}
+
+.checkbox-column label {
+    margin-top: 5px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main-footer {
+    padding: 4rem 7%;
+    background-color: var(--textcolor);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-content {
+    flex: 1 1 200px;
+    text-align: center;
+
+}
+
+.footer-content1 {
+    flex: 1 1 380px;
+    text-align: center;
+    margin-left: -120px;
+    font-size: 1rem;
+    
+}
+
+.footer-content h1 {
+    color: white;
+    font-size: 25px;
+}
+
+.link a {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.foot-pic {
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    align-self: flex-start;
+    width: 150px;
+}
+
+.foot-pic.img {
+    width: 100%;
+}
+
+.fh {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+    color: white;
+    margin-left: -8rem;
+
+}
+
+.footer-content1 p {
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-left: -4rem;
+}
+
+.footer-content1 h2 {
+    color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: -4rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-left: -8.5rem;
+
+}
+
+.social i {
+    color: white;
+    width: 40px;
+    font-size: 2rem;
+}
+
+.social i:hover {
+    color: var(--secondcolor);
+    width: 50px;
+    font-size: 3rem;
+}
+
+
+.dd {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.dd:hover {
+    color: var(--secondcolor);
+    font-size: 1.7rem;
+}
+
+.loc i {
+
+    color: var(--secondcolor);
+    font-size: 1.5rem;
+}
+
+.loc:hover i {
+
+    color: red;
+    font-size: 1.7rem;
+}
+
+.ph i {
+
+    color: var(--secondcolor);
+    font-size: 1.5rem;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.ph:hover i {
+
+    color: green;
+    font-size: 2rem;
+}
+.letter i {
+
+    color: var(--secondcolor);
+    font-size: 1.5rem;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.letter:hover i {
+
+    color: var(--thirdcolor);
+    font-size: 2rem;
+}
+
+
+#ddd{
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+#ddd:hover {
+    color: var(--secondcolor);
+    font-size: 1.6rem;
+}

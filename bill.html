@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Care Compass Hospital</title>
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="icon" href="images/logoc.ico">
+    <link rel="stylesheet" href="bill.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo"><img src="images/CC.png" alt=""></div>
+
+        <nav class="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        </nav>
+
+        <div class="right-icons">
+            <div class="menu-icon" id="menu-bars">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </div>
+
+    </header>
+
+<div class="r">
+    <img src="images/bluelogo.png" alt="">
+</div>
+
+    <section class="bills">
+        <h1 class="heading">Hospital Blling System</h1>
+
+        <div class="main-container">
+
+            <section class="billing-section">
+                <form id="billing-form">
+                    <div class="input-group">
+                        <label for="patient-name">Patient Name:</label>
+                        <input type="text" id="patient-name" placeholder="Enter Patient Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="service-type">Service Type:</label>
+                        <select id="service-type">
+                            <option value="Not Selected">Select a option</option>
+                            <option value="Lab Test - 1000">Lab Test - 1000</option>
+                            <option value="Surgery - 100000">Surgery - 100000</option>
+                            <option value="Consultation - 2500">Consultation - 2500</option>
+                            <option value="OPD - 2500">OPD - 2500</option>
+                            <option value="Emergency - 2000">Emergency - 2000</option>
+                            <option value="Eye checkup - 1500">Eye checkup - 1500</option>
+                            <option value="CT-Scan - 5000">CT-Scan - 5000</option>
+                            <option value="Ultra sound imaging - 6000">Ultra sound imaging - 6000</option>
+                            <option value="Medical report - 1500">Medical report - 1500</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="doctor-name">Doctor Name:</label>
+                        <select id="doctor-name">
+                            <option value="Not Selected">Select a option</option>
+                            <option value="Dr.Ananda Wijewickrama">Dr.Ananda Wijewickrama</option>
+                            <option value="Dr. Anula Wijesundere">Dr. Anula Wijesundere</option>
+                            <option value="Dr. Sunil Perera">Dr. Sunil Perera</option>
+                            <option value="Dr. Duminda Samarasinghe">Dr. Duminda Samarasinghe</option>
+                            <option value="Dr. Hemantha Perera">Dr. Hemantha Perera</option>
+                            <option value="Dr. Prasad Katulanda">Dr. Prasad Katulanda</option>
+                            <option value="Dr. Vindya Wijesinghe">Dr. Vindya Wijesinghe</option>
+                            <option value="Dr. Gamini Goonetilleke">Dr. Gamini Goonetilleke</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="doctor-cost">Doctor Cost:</label>
+                        <input type="text" id="doctor-cost" placeholder="Enter Doctor Cost" >
+                    </div>
+                    <div class="input-group">
+                        <label for="doctor-time">Doctor Time (Hours):</label>
+                        <input type="text" id="doctor-time" placeholder="Enter Doctor Time" >
+                    </div>
+                    <div class="input-group">
+                        <label for="hospital-charges">Hospital Charges:</label>
+                        <input type="text" id="hospital-charges" placeholder="Enter Hospital Charges">
+                    </div>
+                    <div class="input-group">
+                        <label for="days-admitted">Number of Days Admitted:</label>
+                        <input type="text" id="days-admitted" placeholder="Enter Number of Days">
+                    </div>
+                    <div class="input-group">
+                        <label for="additional-cost">Additional Charges:</label>
+                        <input type="text" id="additional-cost" placeholder="Enter Additional Cost">
+                    </div>
+                    <button type="button" class="calculate-btn">Calculate Bill</button>
+                    <button type="button" class="discharge-btn">Discharge</button>
+                    <button type="button" class="print-btn">Print Bill</button>
+                </form>
+                <div class="bill-summary" id="bill-summary">
+                    <h2>Bill Summary</h2>
+                    <p id="total-amount">Total Amount: Rs.0</p>
+                </div>
+                
+            </section>
+
+        </div>
+    </section>
+
+    <div id="discharge-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Discharge Confirmation</h2>
+            <p>Are you sure you want to discharge this patient?</p>
+            <div class="modal-buttons">
+                <button id="confirm-discharge" class="confirm-btn">Yes</button>
+                <button id="cancel-discharge" class="cancel-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="bill.js"></script>
+</body>
+
+</html>

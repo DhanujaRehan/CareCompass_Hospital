@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --maincolor: #001d42;
+    --secondcolor: #0386f8;
+    --thirdcolor: #7ef9f9;
+    --textcolor: #4A5764;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: "Poppins", sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+    background-color: white !important;
+
+}
+
+.logo {
+    width: 150px;
+    margin-right: -2rem;
+}
+
+
+.logo img {
+    width: 100%;
+}
+
+.right-icons .btn {
+    border: 1px solid var(--grad-clr1);
+    background: var(--maincolor);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    align-content: center;
+    border-radius: 25px;
+    width: 130px;
+    text-align: center;
+}
+
+.right-icons .btn:hover {
+    background-color: #ffffff;
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+}
+
+.navbar a {
+    color: var(--textcolor);
+    font-size: 1.7rem;
+    margin: 1rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+    font-weight: 600;
+}
+
+.navbar a::after {
+    content: "";
+    background-color: var(--maincolor);
+    width: 0;
+    position: absolute;
+    height: 0.2rem;
+    left: 0;
+    margin-top: 0.5rem;
+    top: 100%;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-bars {
+    color: var(--textcolor);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: none;
+}
+
+#menu-bars:hover {
+    color: var(--maincolor);
+}
+
+
+.navbar.open {
+    height: 200px;
+}
+
+
+.cashierm {
+    background-image: url(images/backgroung-pattern-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.staff-interface {
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: var(--maincolor);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.staff-details {
+    z-index: 2;
+}
+
+.staff-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--secondcolor);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    justify-content: center;
+}
+
+.staff-card:hover {
+    background: var(--maincolor);
+    color: white;
+}
+
+.staff-card:hover h2 {
+    color: white;
+    letter-spacing: 0.5rem;
+}
+
+.staff-card:hover .staff-picture {
+    border: 1px solid white;
+    transform: scale(1.1);
+
+}
+
+.sc h3 {
+    font-size: 22px;
+    color: var(--secondcolor);
+    margin-bottom: 20px;
+}
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.staff-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: 3px solid var(--maincolor);
+    object-fit: cover;
+}
+
+.staff-info h2 {
+    font-size: 24px;
+    color: black;
+    margin: 5px 0;
+}
+
+.staff-info p {
+    font-size: 16px;
+    color: white;
+    text-align: left;
+}
+
+.hospital-operations {
+    margin: 30px 0;
+    z-index: 2;
+}
+
+.hospital-operations h3 {
+    font-size: 22px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.operations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.operation-item {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--maincolor);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.operation-item:hover {
+    background: var(--maincolor);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.billing-button {
+    background-color: var(--maincolor);
+    color: white;
+    border: 1px solid var(--maincolor);
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.billing-button:hover {
+    background-color: white;
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+    font-weight: bold;
+}
+
+.staff-interface2 .img2 {
+    position: absolute;
+    width: 400px;
+    align-self: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10rem;
+    margin-top: 10rem;
+    opacity: 10%;
+    z-index: 1;
+}
+
+.user {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.user h2 {
+    margin-top: 6rem;
+    font-size: 24px;
+    color: var(--secondcolor);
+}
+
+.user table {
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: 50rem;
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    margin: 25px 0;
+    font-size: 15px;
+}
+
+.user table th,
+.user table td {
+    border: 1px solid #000;
+    padding: 2px;
+}
+
+.user table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.dbutton {
+    text-decoration: none;
+    background-color: rgb(168, 0, 0);
+    padding: 5px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.dbutton:hover {
+    font-weight: bold;
+    background-color: rgb(255, 38, 0);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ubutton {
+    text-decoration: none;
+    background-color: var(--maincolor);
+    padding: 5px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ubutton a {
+    text-decoration: none;
+    color: white;
+}
+
+.ubutton:hover {
+    font-weight: bold;
+    background-color: var(--secondcolor);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user table td.bbb {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.user table td.bbb button {
+    margin-left: 5px;  
+}
+
+.search{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 0.5rem 10rem;
+    border-radius: 20px;
+    background-color: rgb(228, 228, 228);
+}
+.search:hover{
+    background-color: white;
+    color: var(--maincolor);
+    
+}

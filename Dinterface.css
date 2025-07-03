@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+:root {
+    --maincolor: #001d42;
+    --secondcolor: #0386f8;
+    --thirdcolor: #7ef9f9;
+    --textcolor: #4A5764;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: "Poppins", sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+    background-color: white !important;
+
+}
+
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 10rem;
+}
+
+.navbar a {
+
+    color: var(--textcolor);
+    font-size: 1.7rem;
+    margin: 1rem;
+    position: relative;
+    transition: 0.5s;
+    margin-right: -12rem;
+
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+    font-weight: 600;
+}
+
+.navbar a::after {
+    content: "";
+    background-color: var(--maincolor);
+    width: 0;
+    position: absolute;
+    height: 0.2rem;
+    left: 0;
+    margin-top: 0.5rem;
+    top: 100%;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.right-icons .btn {
+    border: 1px solid var(--grad-clr1);
+    background: var(--maincolor);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    align-content: center;
+    border-radius: 25px;
+    width: 130px;
+    text-align: center;
+}
+
+.right-icons .btn:hover {
+    background-color: #ffffff;
+    color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+}
+
+.head1 {
+
+    margin-top: 8rem;
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    background-image: url(images/backgroung-pattern-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hd {
+    background-color: var(--maincolor);
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    flex-direction: column;
+    border-radius: 20rem;
+    border: 3px solid var(--maincolor);
+}
+
+.hd:hover {
+    background-color: white;
+    width: 80%;
+    border: 3px solid var(--maincolor);
+    transition: all 1s ease-in-out;
+}
+
+.hd:hover .dcard {
+    border-radius: 50px;
+}
+
+.hd:hover img {
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+    border-radius: 50px;
+}
+
+.hd:hover h2 {
+    color: var(--maincolor);
+    letter-spacing: 3px;
+    transition: all 1s ease-in-out;
+    font-weight: 800;
+    font-size: 2rem;
+
+}
+
+.hd:hover h3 {
+    color: var(--maincolor);
+    letter-spacing: 3px;
+    transition: all 1s ease-in-out;
+    font-weight: 500;
+}
+
+.head1 h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.dcard {
+    width: 200px;
+    height: 200px;
+    background-color: #0386f8;
+    border-radius: 5px;
+    border: 1px solid var(--maincolor);
+}
+
+.dcard img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.head1 h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.head1 h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.cards {
+    margin-top: -2rem;
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: -5rem;
+}
+
+.carddiv {
+    display: flex;
+    padding: 2rem;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: #4A5764;
+    border-radius: 20px;
+    
+}
+
+.card {
+    margin: 10px;
+    background: white;
+    box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30rem;
+    transition: transform 0.3s ease;
+    background-image: url(images/backgroung-pattern-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    color: var(--secondcolor);
+    background-color: var(--maincolor);
+    transition: transform 0.3s ease;
+
+}
+
+.card:hover h3 {
+    transform: scale(1.1);
+    color: white;
+    transition: transform 0.8s ease;
+}
+
+.card h3 {
+    color: #0078d7;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sup {
+
+    margin: 10px 100px 40px;
+    background-color: #7ef9f9;
+    border-radius: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.hidden {
+    margin-top: 0;
+    display: flex;
+    padding: 2rem;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: #4A5764;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.hidden h2 {
+    font-size: 2rem;
+}
+
+.patient-search {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.patient-search input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.patient-search button {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.patient-search button:hover {
+    background-color: #005bb5;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    border-radius: 5px;
+    background-color: #0078d7;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+table td {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+tr:hover {
+    background-color: #ddd;
+    transition: all 0.1s ease-out;
+}
+
+button.view-details {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+button.view-details:hover {
+    background-color: #327935;
+}
+
+.appointments-list {
+    margin-top: 20px;
+}
+
+.appointment-item {
+    background: #fff;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60rem;
+}
+
+.appointment-item p {
+    font-size: 1.2rem;
+}
+
+button.mark-done {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.mark-done:hover {
+    background-color: #327935;
+}
+
+button.mark-admit {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.mark-admit:hover {
+    background-color: rgb(179, 2, 2);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(5, 0, 69, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+
+}
+
+.popup h2 {
+    color: #4CAF50;
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.popup p {
+    margin: 0 0 15px;
+    font-size: 1.2rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+#closePopup {
+    color: white;
+    font: 500;
+    width: 5rem;
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+#closePopup:hover {
+    color: white;
+    font: 500;
+    width: 5rem;
+    background-color: #327935;
+}
+
+.staff-interface2 .img2 {
+    position: absolute;
+    width: 400px;
+    align-self: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: -11.5rem;
+    margin-top: 8rem;
+    opacity: 10%;
+    z-index: 1;
+}

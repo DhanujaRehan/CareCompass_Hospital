@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Care Compass Hospital</title>
+    <link rel="icon" href="images/logoc.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        </nav>
+
+        <div class="logo"><img src="images/CC.png" alt=""></div>
+
+    </header>
+
+    <section class="ccc">
+        <video loop muted autoplay id="entry2">
+            <source src="images/LVideo.mp4" type="video/mp4">
+        </video>
+        <div class="container" id="container">
+
+
+
+            <div class="form-container sign-up-container">
+                <form action="signup.php" method="POST">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.google.co.uk/" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://www.linkedin.com/" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <div class="infield">
+                        <input type="text" placeholder="name" name="name" required />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="email" placeholder="email" name="email" required />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" name="password" required />
+                        <label></label>
+                    </div>
+
+                    <div class="infield">
+                        <select name="role" id="" class="input">
+                            <option value="" disabled selected>Choose a option</option>
+                            <option value="patient">Patient</option>
+                        </select>
+                    </div>
+
+                    <button>Sign Up</button>
+
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="login.php" method="POST">
+
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.google.co.uk/" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="https://www.linkedin.com/" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <div class="infield">
+                        <input type="email" placeholder="Email" name="email" required autocapitalize="none" />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" name="password" required />
+                        <label></label>
+                    </div>
+
+                    <div class="infield">
+                        <select name="role" id="role" class="input" required>
+                            <option value="" disabled selected>Choose a option</option>
+                            <option value="administrator">Administrator</option>
+                            <option value="hospital_staff">Hospital Staff</option>
+                            <option value="patient">Patient</option>
+                        </select>
+                    </div>
+
+
+                    <a href="#" class="forgot">Forgot your password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container" id="overlayCon">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <img src="images/logoc.png" alt="" class="Lpic">
+                        <h1>Welcome Back!</h1>
+                        <h11>සාදරයෙන් පිළිගනිමු!</h11>
+
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button>Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <img src="images/logoc.png" alt="" class="Lpic">
+                        <h1>Hello! ආයුබෝවන්!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+                <button id="overlayBtn"></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+
+
+
+
+</html>
